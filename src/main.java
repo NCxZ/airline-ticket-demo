@@ -14,7 +14,7 @@ public class main {
         addAirline("Pegasus");
 
         addPlane("Boeing 495",200);
-        addPassenger("Fatihcan Yıldız","13510943286" , 5);
+        addPassenger("Fatihcan Yıldız","13510943" , 5);
 
         String code = addFlight("Ryanair","Boeing 495", "1 Oct 2001");
         System.out.println(code);
@@ -25,8 +25,8 @@ public class main {
         buyTicket(code,"13510943286",15);
         buyTicket(code,"13510943286",16);
         System.out.println(getAirline("Pegasus").getFlight(code).getSeat(15).getStatus());
-        System.out.println(getPassenger("13510943286").getSeats());
-        System.out.println(getPassenger("13510943286"));
+        System.out.println(getPassenger("13510943").getSeats());
+        System.out.println(getPassenger("13510943"));
 
     }
 
