@@ -4,17 +4,27 @@ public class Flight {
     String code;
     Plane plane;
     String dateAndTime;
-    String[] seatStatus;
+    Seat[] seats ;
+    static int lastCode = 1000;
 
     public Flight(Plane plane,String dateAndTime){
-        this.code = "ASFWNNNNW10"; // TODO uniqe code generate -static last code
+
+        this.code = "FLT-" + lastCode;
+        lastCode++;
         this.dateAndTime = dateAndTime;
         this.plane = plane;
-        this.seatStatus= new String[plane.seat];
-        Arrays.fill(seatStatus,"Available");
+        this.seats = new Seat[plane.seat];
+        for (int i=0;i<plane.seat;i++){
+            this.seats[i]= new Seat(this,i);
+        }
+
     }
 
     public String toString(){
         return "Flight: "+plane + " " + "Time:"+dateAndTime ;
+    }
+
+    public Seat getSeat(int number) {
+        return seats[number];
     }
 }
