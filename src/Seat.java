@@ -25,4 +25,9 @@ public class Seat {
                 ", status='" + status + '\'' +
                 '}';
     }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
 }

@@ -19,6 +19,10 @@ public class Passenger {
     public void addSeats(Seat seat){
         seats.add(seat);
     }
+    public void refundSeats(Seat seat){
+        seats.remove(seat);
+    }
+
 
     public List<Seat> getSeats() {
         return seats;

@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 public class Flight {
+    String departure;
+    String destination;
     String code;
     Plane plane;
     String dateAndTime;
